@@ -1,0 +1,7 @@
+---
+- name: install nagios-nrpe-server
+  apt: name=nagios-nrpe-server state=present
+
+- name: install config template
+  template: src=nrpe.cfg dest=/etc/nagios/nrpe.cfg
+  notify: restart nrpe
