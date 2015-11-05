@@ -5,3 +5,4 @@
 - name: install config template
   template: src=nrpe.cfg dest=/etc/nagios/nrpe.cfg
   notify: restart nrpe
+  tags: mon_conf
